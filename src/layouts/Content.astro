@@ -1,0 +1,13 @@
+---
+import Layout from "./Layout.astro";
+---
+
+<Layout>
+    <article class="prose lg:prose-lg m-auto max-w-none w-3/5 mt-4">
+        <div
+            class="font-normal prose-strong:text-secondary prose-h2:!text-lg prose-h3:!text-base prose-headings:font-medium prose-headings:!text-primary !text-secondary prose-figcaption:text-center prose-figcaption:text-primary prose-figure:w-full"
+        >
+            <slot />
+        </div>
+    </article>
+</Layout>

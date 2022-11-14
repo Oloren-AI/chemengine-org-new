@@ -1,0 +1,15 @@
+---
+const { title, img } = Astro.props;
+---
+
+<div class="flex flex-col outline rounded-xl outline-2 outline-[#E9EFFA] p-4">
+    <div class="w-fit h-fit mb-2">
+        <img src={img} class="" />
+    </div>
+    <h2 class="font-semibold text-xl">
+        {title}
+    </h2>
+    <p class="text-secondary">
+        <slot />
+    </p>
+</div>

@@ -1,0 +1,158 @@
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 52.03deg;
+}
+
+.a:hover {
+    filter: brightness(85%);
+}
+
+.oloren-gradient {
+    background: linear-gradient(var(--a), #0D57ED 40.77%, #6843D8 82.17%);
+}
+
+.outline-button:hover {
+    transition-timing-function: ease-in-out;
+    transition: 0.5s;
+    color: white;
+    background: rgba(51, 170, 51, 0)
+}
+
+
+.oloren-gradient:hover {
+    --a: 350deg;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    filter: brightness(130%);
+}
+
+$burger--thickness: 4px;
+
+.burger {
+    $width: 28px;
+
+    display: inline-block;
+    border: 0;
+    background: none;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+
+    border-bottom: $burger--thickness solid currentColor;
+    width: $width;
+
+    transition: border-bottom 1s ease-in-out;
+    -webkit-transition: border-bottom 1s ease-in-out;
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        border-bottom: $burger--thickness solid currentColor;
+        width: 100%;
+        margin-bottom: 5px;
+        transition: transform 0.5s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        border-bottom: $burger--thickness solid currentColor;
+        width: 100%;
+        margin-bottom: 5px;
+        transition: transform 0.5s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    }
+}
+
+.burger-check {
+    display: none;
+}
+
+.burger-check:checked~.burger {
+    border-bottom: $burger--thickness solid transparent;
+    transition: border-bottom 0.8s ease-in-out;
+    -webkit-transition: border-bottom 0.8s ease-in-out;
+
+    &:before {
+        transform: rotate(-405deg) translateY(1px) translateX(-3px);
+        -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+        transition: transform 0.5s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    }
+
+    &:after {
+        transform: rotate(405deg) translateY(-4px) translateX(-5px);
+        -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+        transition: transform 0.5s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    }
+}
+
+$navigation__transition: max-height 0.5s ease-in-out;
+
+.navigation {
+    overflow: hidden;
+    max-height: 0;
+
+    transition: $navigation__transition;
+}
+
+.burger-check:checked~.navigation {
+    max-height: 500px;
+    transition: $navigation__transition;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..900');
+
+mark {
+    @apply bg-inherit;
+}
+
+mark.gradient {
+    background: -webkit-linear-gradient(top left, #1C62E7, #6942D7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.olorengradient {
+    background-image: linear-gradient(45deg, #1C62E7, #6942D7);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cta {
+    background-image: linear-gradient(#84C7F7, #B4A1EB);
+}
+
+aside {
+    @apply bg-neutral/50 p-4 text-black pl-8 -indent-6 rounded-md;
+}
+
+
+aside::first-letter {
+    @apply text-xl;
+}
+
+img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p a {
+    color: #1C62E7;
+}
+
+p a:hover {
+    color: #174fb7;
+}

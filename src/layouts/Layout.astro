@@ -1,0 +1,105 @@
+---
+import "./main.scss";
+---
+
+<!DOCTYPE html>
+<html lang="en-US" data-theme="light">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<title>Oloren ChemEngine</title>
+
+		<link
+			rel="shortcut icon"
+			type="image/png"
+			href="assets/images/techicon.svg"
+		/>
+	</head>
+	<body class="bg-white text-primary">
+		<div class="flex w-screen flex-col bg-white text-primary">
+			<section
+				id="mobile-navbar"
+				class="flex h-fit w-full flex-row justify-between px-4 pt-4 lg:hidden"
+			>
+				<a class="h-6 w-fit" href="{{site.url}}">
+					<img
+						src="/assets/logo.svg"
+						class="h-full w-fit"
+						id="logo"
+					/>
+				</a>
+				<div class="flex h-full flex-col items-end">
+					<input
+						class="burger-check"
+						id="burger-check"
+						type="checkbox"
+					/><label for="burger-check" class="burger"></label>
+					<nav
+						id="navigation1"
+						class="float navigation flex flex-col items-end px-1"
+					>
+						<a href="">Installation</a>
+						<a href="https://docs.oloren.ai">Documentation</a>
+						<a href="">Examples</a>
+					</nav>
+				</div>
+			</section>
+			<section
+				id="navbar"
+				class="mx-auto mt-6 hidden h-24 w-3/4 max-w-7xl items-center justify-between md:max-w-7xl lg:flex"
+			>
+				<a class="h-1/4 w-fit" href="{{site.url}}">
+					<img
+						src="/assets/logo.svg"
+						class="h-full w-fit"
+						id="logo"
+					/>
+				</a>
+				<ul
+					id="links"
+					class="font-lg flex flex-row items-center space-x-10 text-secondary"
+				>
+					<a href="">Installation</a>
+					<a href="https://docs.oloren.ai">Documentation</a>
+					<a href="">Examples</a>
+				</ul>
+			</section>
+
+			<slot />
+
+			<section
+				id="footer"
+				class="h-fit w-full bg-[#F6F9FE] py-16 lg:py-24"
+			>
+				<div
+					class="m-auto flex flex-col items-center justify-between space-y-8 md:w-3/4 md:max-w-7xl md:flex-row md:space-y-0"
+				>
+					<div>
+						<img src="/assets/logo.svg" class="h-5 w-auto" />
+					</div>
+
+					<div
+						id="links"
+						class="font-lg flex flex-col items-center space-y-2 text-left text-secondary"
+					>
+						<a href="{{site.url}}/#technology">Technology</a>
+						<a href="{{site.url}}/#products">Products</a>
+						<a href="https://beta.oloren.ai">Demo</a>
+						<a href="{{site.url}}/#blogs">Blog</a>
+					</div>
+
+					<a
+						class="olorengradient h-fit w-fit rounded-xl p-px"
+						href="mailto:contact@oloren.ai"
+					>
+						<div
+							class="outline-button rounded-[11px] bg-[#F6F9FE] px-8 py-3"
+						>
+							Contact Us
+						</div>
+					</a>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
