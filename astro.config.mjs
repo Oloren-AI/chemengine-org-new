@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://oloren-ai.github.io',
-  base: '/chemengine-org-new',
+  base: '',
   integrations: [tailwind()]
 });
